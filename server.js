@@ -6,6 +6,10 @@ const cors = require("cors")
 
 const app = express();
 
+const dotenv = require("dotenv");
+dotenv.config({
+  path: "./config.env",
+});
 
 app.use(bodyParser.json({limit: "30mb", extended: true}))
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true}))
